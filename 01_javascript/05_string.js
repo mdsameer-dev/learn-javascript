@@ -7,6 +7,19 @@ let myName = "Mohd Sameer"
 let city = "Akola"
 console.log(`my name is ${myName}. I am from ${city}`)
 
+// in javajcript string interpolation is done using template literals strings
+// enclosed in backticks (`) with embedded expressions written inside ${}
+
+
+// another way to declare string
+
+const fullNameId = new String("Mohd Sameer")
+console.log(fullNameId); // [String: 'Mohd Sameer']
+
+let userId = "mdsameeramity_18"
+console.log(userId.charAt(8))       // - a
+console.log(userId.indexOf("m"));   // - 0
+
 
 // ==> string indexing
 
@@ -59,8 +72,8 @@ console.log(s.toLowerCase()); // "javascript"
 
 // ==> Extracting / Slicing Methods
 
-const s = "JavaScript";
+const n = "JavaScript";
 
-console.log(s.slice(0, 4));     // "Java"
-console.log(s.slice(-6));       // "Script"
-console.log(s.substring(0, 4)); // "Java"
+console.log(n.slice(0, 4));     // "Java"
+console.log(n.slice(-6));       // "Script"
+console.log(n.substring(0, 4)); // "Java"

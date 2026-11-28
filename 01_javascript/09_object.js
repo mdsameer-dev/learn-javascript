@@ -7,6 +7,9 @@
 // change the value        // profile.location = "Mumbai"
 // freezed object          // Object.freeze(profile) value does't change
 // inside the object use :
+// access object keys      // console.log(Object.keys(profile)) output value --> array []
+// access object values    // console.log(Object.values(profile)) output value --> araay []
+
 
 
 // object literals
@@ -35,7 +38,8 @@ console.log(profile.greeting());
 profile.greetingtwo = function() {
     console.log(`Hello JS user, ${this.userId}`);
 }
-console.log(profile.greetingtwo());
+
+// console.log(profile.greetingtwo());
 
 
 // Singleton Object
@@ -71,16 +75,24 @@ const instaUser = {
 // Object Merge
 
 const object1 = {
-    userId: "zakwan" ,
+    userId1: "zakwan" ,
     age1: 10,
-    isFollwed: true
+    isFollwed1: true
 }
 
 const object2 = {
-    userId: "Saffan",
+    userId2: "Saffan",
     age2: "5",
-    isFollwed: false,
+    isFollwed2: false,
 }
 
-const object3 = { object1, object2 }
+// const object3 = { object1, object2 }
+// const object3 = Object.assign({}, object1, object2)  // {} optional // Rarely used
+
+const object3 = {...object1, ...object2}  // commonly used
 console.log(object3);
+
+console.log(Object.values(profile));
+console.log(Object.entries(profile));
+// console.log(Object.hasOwn('email'));             // wrong syntax
+console.log(profile.hasOwnProperty('isLoggedIn'));  // true
